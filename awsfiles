@@ -27,7 +27,7 @@ pipeline {
         stage('Upload to S3') {
             steps {
                 script {
-                    // Upload the TestRun directory to S3 aws
+                    // Upload the TestRun directory to S3
                     sh """
                         aws s3 cp ${TESTRUN_PATH} s3://${S3_BUCKET_NAME}/auto-pilot/TestRun/ --recursive
                     """
